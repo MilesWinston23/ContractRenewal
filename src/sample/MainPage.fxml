@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Email" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="contractTypeColumn" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="contractNameColumn" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="contractIdColumn" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="contractBusinessUnitColumn" prefWidth="75.0" text="Unit" />
+            <TableColumn fx:id="contractOwnerColumn" prefWidth="75.0" text="Owner" />
+            <TableColumn fx:id="contractDocTypeColumn" prefWidth="75.0" text="Doc Type" />
+            <TableColumn fx:id="contractStatusColumn" prefWidth="75.0" text="Status" />
+            <TableColumn fx:id="contractStartDateColumn" prefWidth="75.0" text="Start Date" />
+            <TableColumn fx:id="contractEndDateColumn" prefWidth="75.0" text="End Date" />
+            <TableColumn fx:id="contractReviewDateColumn" prefWidth="75.0" text="Review Date" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button fx:id="button" mnemonicParsing="false" onAction="#handleAddButton" text="Add" />
+            <Button mnemonicParsing="false" onAction="#deleteButtonClicked" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#handleAlertSelectButton" text="Set Alert" />
+        </items>
+      </ToolBar>
+   </bottom>
+</BorderPane>
